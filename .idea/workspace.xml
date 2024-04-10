@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;Encapsumaliento del codigo.&quot;">
-      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Series.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Titulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Pelicula.java" afterDir="false" />
-    </list>
+    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;Aplicacion de herencia en el codigo.&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,13 +107,22 @@
       <option name="project" value="LOCAL" />
       <updated>1712775131388</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;Aplicacion de herencia en el codigo.&quot;">
+      <option name="closed" value="true" />
+      <created>1712781544934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712781544934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;inicio app screenmatch&quot;" />
     <MESSAGE value="&quot;agrega objetos, metodos y atributos.&quot;" />
     <MESSAGE value="&quot;Encapsumaliento del codigo.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Encapsumaliento del codigo.&quot;" />
+    <MESSAGE value="&quot;Aplicacion de herencia en el codigo.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Aplicacion de herencia en el codigo.&quot;" />
   </component>
 </project>

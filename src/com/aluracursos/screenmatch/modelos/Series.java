@@ -12,6 +12,8 @@ public class Series extends Titulo{
     @Override
     public void muestraFichaTecnica(){
         System.out.println("El nombre de la serie es: " + getNombre());
+        System.out.println("Su fecha de lanzamiento es: " + getFechaDeLanzamiento());
+        System.out.println("Duracion en minutos: " + getDuracionEnMinutos());
     }
 
     public int getTemporadas() {
