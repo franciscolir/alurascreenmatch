@@ -4,16 +4,16 @@ public class Series extends Titulo{
     private int temporadas;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
+    private String tipo= "serie";
+
+    @Override
+    public String getTipo() {
+        return tipo;
+    }
 
     @Override
     public int getDuracionEnMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
-    }
-    @Override
-    public void muestraFichaTecnica(){
-        System.out.println("El nombre de la serie es: " + getNombre());
-        System.out.println("Su fecha de lanzamiento es: " + getFechaDeLanzamiento());
-        System.out.println("Duracion en minutos: " + getDuracionEnMinutos());
     }
 
     public int getTemporadas() {

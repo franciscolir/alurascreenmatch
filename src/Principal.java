@@ -1,3 +1,4 @@
+import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Series;
 
@@ -18,6 +19,21 @@ public class Principal {
 
         System.out.println("************************************************");
 
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Mulan");
+        otraPelicula.setFechaDeLanzamiento(2002);
+        otraPelicula.setDuracionEnMinutos(130);
+        otraPelicula.setIncluidoEnElPlan(true);
+
+        otraPelicula.muestraFichaTecnica();
+        otraPelicula.evalua(9);
+        otraPelicula.evalua(10);
+        otraPelicula.evalua(10);
+        System.out.println(otraPelicula.getTotalDeLasEvaluaciones());
+        System.out.println("Media de las evaluaciones de la peicula: " + otraPelicula.calculaMedia());
+
+        System.out.println("************************************************");
+
         Series casaDragon = new Series();
         casaDragon.setNombre("La casa del dragón");
         casaDragon.setFechaDeLanzamiento(2022);
@@ -31,6 +47,13 @@ public class Principal {
         casaDragon.evalua(10);
         System.out.println(casaDragon.getTotalDeLasEvaluaciones());
         System.out.println("Media de las evaluaciones de la peicula: " + casaDragon.calculaMedia());
+        System.out.println("***************************************");
 
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(otraPelicula);
+        System.out.println("Cantidad de titulos incluidos: " + calculadora.getCantidadDeTitulosIncluidos());
+        System.out.println("Tiempo total para ver tus titulos favoritos " + calculadora.getTiempoTotal() + " minutos");
     }
 }
