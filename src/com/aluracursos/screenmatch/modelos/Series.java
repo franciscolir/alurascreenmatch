@@ -6,6 +6,11 @@ public class Series extends Titulo{
     private int minutosPorEpisodio;
     private String tipo= "serie";
 
+    public Series(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
+
+
     @Override
     public String getTipo() {
         return tipo;

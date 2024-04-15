@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroDeRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -5,12 +7,10 @@ import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Series;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Encanto");
-        miPelicula.setFechaDeLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto",2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -23,8 +23,7 @@ public class Principal {
 
         System.out.println("************************************************");
 
-        Pelicula otraPelicula = new Pelicula("Mulan");
-        otraPelicula.setFechaDeLanzamiento(2002);
+        Pelicula otraPelicula = new Pelicula("Mulan",2002);
         otraPelicula.setDuracionEnMinutos(130);
         otraPelicula.setIncluidoEnElPlan(true);
 
@@ -37,9 +36,7 @@ public class Principal {
 
         System.out.println("************************************************");
 
-        Series casaDragon = new Series();
-        casaDragon.setNombre("La casa del dragón");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Series casaDragon = new Series("La casa del dragón",2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
@@ -74,10 +71,8 @@ public class Principal {
         System.out.println("***************************************");
 
         //var reemplaza a palabra inicial de instanciacion de objeto
-        var peliculaDeEjemplo = new Pelicula("El Señor de los anillos");
+        var peliculaDeEjemplo = new Pelicula("El Señor de los anillos", 2001);
         peliculaDeEjemplo.setDuracionEnMinutos(180);
-        peliculaDeEjemplo.setFechaDeLanzamiento(2001);
-
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeEjemplo);
         listaDePeliculas.add(miPelicula);
