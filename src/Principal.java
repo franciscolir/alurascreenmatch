@@ -4,10 +4,12 @@ import com.aluracursos.screenmatch.modelos.Episodio;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Series;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -21,8 +23,7 @@ public class Principal {
 
         System.out.println("************************************************");
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Mulan");
+        Pelicula otraPelicula = new Pelicula("Mulan");
         otraPelicula.setFechaDeLanzamiento(2002);
         otraPelicula.setDuracionEnMinutos(130);
         otraPelicula.setIncluidoEnElPlan(true);
@@ -71,5 +72,20 @@ public class Principal {
         filtroDeRecomendacion.filtro(episodio);
 
         System.out.println("***************************************");
+
+        //var reemplaza a palabra inicial de instanciacion de objeto
+        var peliculaDeEjemplo = new Pelicula("El Señor de los anillos");
+        peliculaDeEjemplo.setDuracionEnMinutos(180);
+        peliculaDeEjemplo.setFechaDeLanzamiento(2001);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeEjemplo);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+
+        System.out.println("Tamaño de lista: " + listaDePeliculas.size());
+        System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
+        System.out.println(listaDePeliculas.toString());
+
     }
 }

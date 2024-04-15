@@ -4,9 +4,13 @@ import com.aluracursos.screenmatch.calculos.Clasificacion;
 
 public class Pelicula extends Titulo implements Clasificacion {
    private String director;
-   private String tipo= "pelicula";
+   private String tipo = "pelicula";
 
- @Override
+    public Pelicula(String nombre) {
+        this.setNombre(nombre);
+    }
+
+    @Override
    public String getTipo() {
         return tipo;
     }
@@ -22,6 +26,10 @@ public class Pelicula extends Titulo implements Clasificacion {
     @Override
     public int getClasificacion() {
         return (int) (calculaMedia() / 2);
+    }
+    //sobrescribir metodo toString de ArrayList
+    public String toString(){
+     return "Pelicula: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
     }
 }
 
