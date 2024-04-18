@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;Implementando API&quot;">
+    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;Trabajando Json&quot;">
+      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/TituloOmdb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenmatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/screenmatch.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Titulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Titulo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" afterDir="false" />
     </list>
@@ -19,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -267,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713459180300</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="&quot;Trabajando Json&quot;">
+      <option name="closed" value="true" />
+      <created>1713470017302</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713470017302</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -282,6 +291,7 @@
     <MESSAGE value="&quot;Avance&quot;" />
     <MESSAGE value="&quot;ArrayList - List&quot;" />
     <MESSAGE value="&quot;Implementando API&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Implementando API&quot;" />
+    <MESSAGE value="&quot;Trabajando Json&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Trabajando Json&quot;" />
   </component>
 </project>
