@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;ArrayList - List&quot;">
-      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" afterDir="false" />
+    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;Implementando API&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrincipalConBusqueda.executor&quot;: &quot;Run&quot;,
     &quot;Application.PrincipalConListas.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -237,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713210242006</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="&quot;Implementando API&quot;">
+      <option name="closed" value="true" />
+      <created>1713445031206</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713445031206</updated>
+    </task>
+    <task id="LOCAL-00017" summary="&quot;Implementando API&quot;">
+      <option name="closed" value="true" />
+      <created>1713445040973</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713445040973</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -251,6 +268,7 @@
     <MESSAGE value="&quot;Se continua con ArrayList. Ordena listas&quot;" />
     <MESSAGE value="&quot;Avance&quot;" />
     <MESSAGE value="&quot;ArrayList - List&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;ArrayList - List&quot;" />
+    <MESSAGE value="&quot;Implementando API&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Implementando API&quot;" />
   </component>
 </project>
