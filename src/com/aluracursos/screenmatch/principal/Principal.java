@@ -1,86 +1,63 @@
-package com.aluracursos.screenmatch.principal;
+package com.alura.screenmatch.principal;
 
-import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
-import com.aluracursos.screenmatch.calculos.FiltroDeRecomendacion;
-import com.aluracursos.screenmatch.modelos.Episodio;
-import com.aluracursos.screenmatch.modelos.Pelicula;
-import com.aluracursos.screenmatch.modelos.Series;
+import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
+import com.alura.screenmatch.calculos.FiltroRecomendacion;
+import com.alura.screenmatch.modelos.Episodio;
+import com.alura.screenmatch.modelos.Pelicula;
+import com.alura.screenmatch.modelos.Serie;
 
 import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Encanto",2021);
-        miPelicula.setDuracionEnMinutos(120);
-        miPelicula.setIncluidoEnElPlan(true);
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
+        miPelicula.setDuracionEnMinutos(180);
+        System.out.println("Duración de la película: " + miPelicula.getDuracionEnMinutos());
 
         miPelicula.muestraFichaTecnica();
-        miPelicula.evalua(7.8);
+        miPelicula.evalua(8);
+        miPelicula.evalua(5);
         miPelicula.evalua(10);
-        miPelicula.evalua(10);
-        System.out.println(miPelicula.getTotalDeLasEvaluaciones());
-        System.out.println("Media de las evaluaciones de la peicula: " + miPelicula.calculaMedia());
+        System.out.println("Total de evaluaciones: " + miPelicula.getTotalDeEvaluaciones());
+        System.out.println(miPelicula.calculaMediaEvaluaciones());
 
-        System.out.println("************************************************");
 
-        Pelicula otraPelicula = new Pelicula("Mulan",2002);
-        otraPelicula.setDuracionEnMinutos(130);
-        otraPelicula.setIncluidoEnElPlan(true);
+        Serie lost = new Serie("Lost", 2000);
+        lost.muestraFichaTecnica();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(50);
+        System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
 
-        otraPelicula.muestraFichaTecnica();
-        otraPelicula.evalua(9);
-        otraPelicula.evalua(10);
-        otraPelicula.evalua(10);
-        System.out.println(otraPelicula.getTotalDeLasEvaluaciones());
-        System.out.println("Media de las evaluaciones de la peicula: " + otraPelicula.calculaMedia());
-
-        System.out.println("************************************************");
-
-        Series casaDragon = new Series("La casa del dragón",2022);
-        casaDragon.setTemporadas(1);
-        casaDragon.setMinutosPorEpisodio(50);
-        casaDragon.setEpisodiosPorTemporada(10);
-
-        casaDragon.muestraFichaTecnica();
-        casaDragon.evalua(10);
-        casaDragon.evalua(10);
-        casaDragon.evalua(10);
-        System.out.println(casaDragon.getTotalDeLasEvaluaciones());
-        System.out.println("Media de las evaluaciones de la peicula: " + casaDragon.calculaMedia());
-        System.out.println("***************************************");
+        Pelicula otraPelicula = new Pelicula("Avatar", 2023);
+        otraPelicula.setDuracionEnMinutos(200);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
-        calculadora.incluye(miPelicula);
-        calculadora.incluye(casaDragon);
-        calculadora.incluye(otraPelicula);
-        System.out.println("Cantidad de titulos incluidos: " + calculadora.getCantidadDeTitulosIncluidos());
-        System.out.println("Tiempo total para ver tus titulos favoritos " + calculadora.getTiempoTotal() + " minutos");
+        calculadora.incluido(miPelicula);
+        calculadora.incluido(otraPelicula);
+        calculadora.incluido(lost);
+        System.out.println(calculadora.getTiempoTotal());
 
-        FiltroDeRecomendacion filtroDeRecomendacion = new FiltroDeRecomendacion();
-        filtroDeRecomendacion.filtro(miPelicula);
-
-        System.out.println("***************************************");
+        FiltroRecomendacion filtro = new FiltroRecomendacion();
+        filtro.filtra(miPelicula);
 
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
-        episodio.setNombre("La Casa Targaryen");
-        episodio.setSeries(casaDragon);
-        episodio.setTotalVisualizaciones(50);
-        filtroDeRecomendacion.filtro(episodio);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizaciones(300);
+        filtro.filtra(episodio);
 
-        System.out.println("***************************************");
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
+        peliculaDeBruno.setDuracionEnMinutos(180);
 
-        //var reemplaza a palabra inicial de instanciacion de objeto
-        var peliculaDeEjemplo = new Pelicula("El Señor de los anillos", 2001);
-        peliculaDeEjemplo.setDuracionEnMinutos(180);
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
-        listaDePeliculas.add(peliculaDeEjemplo);
+        listaDePeliculas.add(peliculaDeBruno);
         listaDePeliculas.add(miPelicula);
         listaDePeliculas.add(otraPelicula);
 
-        System.out.println("Tamaño de lista: " + listaDePeliculas.size());
+        System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
         System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
         System.out.println(listaDePeliculas.toString());
-
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
     }
 }

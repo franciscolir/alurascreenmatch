@@ -1,50 +1,50 @@
-package com.aluracursos.screenmatch.principal;
+package com.alura.screenmatch.principal;
 
-import com.aluracursos.screenmatch.modelos.Pelicula;
-import com.aluracursos.screenmatch.modelos.Series;
-import com.aluracursos.screenmatch.modelos.Titulo;
+import com.alura.screenmatch.modelos.Pelicula;
+import com.alura.screenmatch.modelos.Serie;
+import com.alura.screenmatch.modelos.Titulo;
 
 import java.util.*;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Encanto",2021);
+
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.evalua(9);
-        Pelicula otraPelicula = new Pelicula("Mulan",2002);
+        Pelicula otraPelicula = new Pelicula("Avatar", 2023);
         otraPelicula.evalua(6);
-        var peliculaDeEjemplo = new Pelicula("El Señor de los anillos", 2001);
-        peliculaDeEjemplo.evalua(10);
-        Series casaDragon = new Series("La casa del dragón",2022);
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
+        peliculaDeBruno.evalua(10);
+        Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> lista= new ArrayList<>();
+        Pelicula p1 = miPelicula;
 
+        List<Titulo> lista = new LinkedList<>();
         lista.add(miPelicula);
         lista.add(otraPelicula);
-        lista.add(peliculaDeEjemplo);
-        lista.add(casaDragon);
+        lista.add(peliculaDeBruno);
+        lista.add(lost);
 
-        for (Titulo item: lista){
+        for (Titulo item: lista) {
             System.out.println(item.getNombre());
-            if (item instanceof Pelicula pelicula ) {
+            if (item instanceof Pelicula pelicula && pelicula.getClasificacion() > 2){
                 System.out.println(pelicula.getClasificacion());
-            }else {
-                System.out.println("No tiene calificacion");
             }
         }
-        List<String> listaDeArtistas = new ArrayList<>();
-        listaDeArtistas.add("Penelope Cruz");
-        listaDeArtistas.add("Antonio Banderas");
-        listaDeArtistas.add("Ricardo Darin");
-        listaDeArtistas.add("Mario Moreno");
 
-        //Collectios.sort ordena lista
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penélope Cruz");
+        listaDeArtistas.add("Antonio Banderas");
+        listaDeArtistas.add("Ricardo Darín");
+        System.out.println(listaDeArtistas);
+
         Collections.sort(listaDeArtistas);
-        System.out.println("List de artistas: " + listaDeArtistas);
+        System.out.println("Lista de artistas ordenada:" + listaDeArtistas);
 
         Collections.sort(lista);
-        System.out.println("Lista de titulos por Nombre (Collection.sort): " + lista);
+        System.out.println("Lista de titulos ordenados: " + lista);
 
         lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
-        System.out.println("Lista de titulos por fecha (Comparator): " + lista);
+        System.out.println("Lista ordenada por fecha: "+lista);
     }
 }

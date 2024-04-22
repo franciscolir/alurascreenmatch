@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;Trabajando Json&quot;">
-      <change afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/TituloOmdb.java" afterDir="false" />
+    <list default="true" id="59a77f70-33dd-41a7-8ecb-c77bb38ac521" name="Changes" comment="&quot;avance en Json. Record&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Titulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/modelos/Titulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aluracursos/screenmatch/principal/PrincipalConBusqueda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713470017302</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="&quot;avance en Json. Record&quot;">
+      <option name="closed" value="true" />
+      <created>1713472296891</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713472296891</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -292,6 +297,7 @@
     <MESSAGE value="&quot;ArrayList - List&quot;" />
     <MESSAGE value="&quot;Implementando API&quot;" />
     <MESSAGE value="&quot;Trabajando Json&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Trabajando Json&quot;" />
+    <MESSAGE value="&quot;avance en Json. Record&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;avance en Json. Record&quot;" />
   </component>
 </project>

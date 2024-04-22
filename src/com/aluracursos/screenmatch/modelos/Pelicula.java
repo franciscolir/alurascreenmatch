@@ -1,20 +1,12 @@
-package com.aluracursos.screenmatch.modelos;
+package com.alura.screenmatch.modelos;
 
-import com.aluracursos.screenmatch.calculos.Clasificacion;
+import com.alura.screenmatch.calculos.Clasificable;
 
-public class Pelicula extends Titulo implements Clasificacion {
-   private String director;
-   private String tipo = "pelicula";
-
-
+public class Pelicula extends Titulo implements Clasificable {
+    private String director;
 
     public Pelicula(String nombre, int fechaDeLanzamiento) {
         super(nombre, fechaDeLanzamiento);
-    }
-
-    @Override
-   public String getTipo() {
-        return tipo;
     }
 
     public String getDirector() {
@@ -27,11 +19,11 @@ public class Pelicula extends Titulo implements Clasificacion {
 
     @Override
     public int getClasificacion() {
-        return (int) (calculaMedia() / 2);
+        return (int) calculaMediaEvaluaciones() / 2;
     }
-    //sobrescribir metodo toString de ArrayList
-    public String toString(){
-     return "Pelicula: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
+
+    @Override
+    public String toString() {
+        return "Pelicula: " + this.getNombre() + " (" + getFechaDeLanzamiento() + ")";
     }
 }
-

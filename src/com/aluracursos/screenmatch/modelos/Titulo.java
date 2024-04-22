@@ -1,17 +1,14 @@
-package com.aluracursos.screenmatch.modelos;
+package com.alura.screenmatch.modelos;
 
-import com.google.gson.annotations.SerializedName;
+import com.alura.screenmatch.excepcion.ErrorEnConversionDeDuracionException;
 
-public class Titulo implements Comparable <Titulo>{
-    @SerializedName("Title")
+public class Titulo implements Comparable<Titulo>{
     private String nombre;
-    @SerializedName("year")
     private int fechaDeLanzamiento;
-    private int duracionEnMinutos;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
-    private int totalDeLasEvaluaciones;
-    private String tipo;
+    private int totalDeEvaluaciones;
+    private int duracionEnMinutos;
 
     public Titulo(String nombre, int fechaDeLanzamiento) {
         this.nombre = nombre;
@@ -21,15 +18,13 @@ public class Titulo implements Comparable <Titulo>{
     public Titulo(TituloOmdb miTituloOmdb) {
         this.nombre = miTituloOmdb.title();
         this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.year());
-        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime());
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+        if (miTituloOmdb.runtime().contains("N/A")){
+            throw new ErrorEnConversionDeDuracionException("No pude convertir la duracion," +
+                    "porque contiene un N/A");
+        }
+        this.duracionEnMinutos = Integer.valueOf(
+                miTituloOmdb.runtime().substring(0,3).replace(" ","")
+        );
     }
 
     public String getNombre() {
@@ -40,12 +35,16 @@ public class Titulo implements Comparable <Titulo>{
         return fechaDeLanzamiento;
     }
 
+    public boolean isIncluidoEnElPlan() {
+        return incluidoEnElPlan;
+    }
+
     public int getDuracionEnMinutos() {
         return duracionEnMinutos;
     }
 
-    public boolean isIncluidoEnElPlan(boolean b){
-        return incluidoEnElPlan;
+    public int getTotalDeEvaluaciones() {
+        return totalDeEvaluaciones;
     }
 
     public void setNombre(String nombre) {
@@ -56,30 +55,26 @@ public class Titulo implements Comparable <Titulo>{
         this.fechaDeLanzamiento = fechaDeLanzamiento;
     }
 
+    public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
+        this.incluidoEnElPlan = incluidoEnElPlan;
+    }
+
     public void setDuracionEnMinutos(int duracionEnMinutos) {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
-    public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
-        this.incluidoEnElPlan = incluidoEnElPlan;
-    }
-    public int getTotalDeLasEvaluaciones(){
-        return totalDeLasEvaluaciones;
-    }
-
     public void muestraFichaTecnica(){
-        System.out.println("El nombre de la " + getTipo() + " es: " + getNombre());
-        System.out.println("Su fecha de lanzamiento es: " + getFechaDeLanzamiento());
-        System.out.println("Duracion en minutos: " + getDuracionEnMinutos());
+        System.out.println("Nombre de la película: " + nombre);
+        System.out.println("Año de lanzamiento: " + fechaDeLanzamiento);
     }
 
     public void evalua(double nota){
         sumaDeLasEvaluaciones += nota;
-        totalDeLasEvaluaciones ++;
+        totalDeEvaluaciones++;
     }
 
-    public double calculaMedia(){
-        return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    public double calculaMediaEvaluaciones(){
+        return sumaDeLasEvaluaciones / totalDeEvaluaciones;
     }
 
     @Override
@@ -89,8 +84,8 @@ public class Titulo implements Comparable <Titulo>{
 
     @Override
     public String toString() {
-        return "nombre='" + nombre + '\'' +
-                ", fechaDeLanzamiento=" + fechaDeLanzamiento +
-                ", duracion" + duracionEnMinutos;
+        return "(nombre=" + nombre +
+                ", fechaDeLanzamiento=" + fechaDeLanzamiento+
+                ", duracion="+duracionEnMinutos+")";
     }
 }
